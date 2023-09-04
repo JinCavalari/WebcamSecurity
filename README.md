@@ -5,6 +5,6 @@ Fiquei preocupado com a segurança quando tinha alugado a casa, eu tinha q ir tr
 Vou deixar esses códigos aqui como portfólio e caso alguém ache interessante usar, pode baixar e editar também.<br>
 <br>
 <b>Dependencias: Python3, Opencv2, Pynput, Numpy.</b><br>
-A combinação para parar a gravação é CTRL_LEFT + ALT_LEFT + SHIFT (não necessariamente nesta ordem)<br>
+As gravações ficam todas salvas na pasta <b>recs</b>, e a combinação para parar a gravação é <b>CTRL_LEFT + ALT_LEFT + SHIFT</b> (não necessariamente nesta ordem)<br>
 Como gravar o tempo todo gastaria uma grande quantidade de memória em um curto período, programei também detecção de movimento. A função <b>motionDetect</b> dentro da classe <b>Webcam</b>. Se passasse um inseto na frente por milésimos de segundos ele começava a gravar e terminava em 3 segundos, caso não ouvesse outro movimento na camera.<br>
 O arquivo Microphone.py (não finalizado) ainda estava em desenvolvimento porque não havia tanta necessidade quanto o vídeo e o microfone do notebook também não ajudava muito, mas comecei a codar porque poderia ser uma informação a mais que poderia coletar (Nomes talvez, etc).
