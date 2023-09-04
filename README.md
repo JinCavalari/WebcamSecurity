@@ -1,5 +1,5 @@
 # WebcamSecurity
-Projeto em python para usar a webcam como câmera de segurança com detecção de movimento.
+Projeto em Python para usar a webcam como câmera de segurança com detecção de movimento.
 
 Fiquei preocupado com a segurança quando tinha alugado a casa, eu tinha q ir trabalhar todos os dias deixando a casa apenas na fé. Se alguém entrasse despercebido na casa e levasse o Notebook, eu saberia quem foi / teria alguma informação, porque eu deixava rodando nas pastas do Google Drive com todas as gravações. Então no trabalho mesmo eu poderia ver quem foi.<br>
 Vou deixar esses códigos aqui como portfólio e caso alguém ache interessante usar, pode baixar e editar também.<br>
