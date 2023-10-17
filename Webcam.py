@@ -2,10 +2,8 @@ import cv2
 from pynput import keyboard
 from datetime import datetime
 from threading import Thread
-from threading import Timer
 import time
 import numpy as np
-import os
 
 class Webcam:
 	def __init__(self):
@@ -15,7 +13,6 @@ class Webcam:
 		self.size = (640, 480)
 		self.end = False
 		self.openCam = True
-		self.rcdCam = True
 		self.camera = None
 		self.listener = None
 		self.keys = []
@@ -83,14 +80,8 @@ class Webcam:
 				self.camera.release()
 				break
 
-	def start(self):
-		print("Iniciando Captura")
-		# if self.rcdCam:
-		# 	self.camera = cv2.VideoWriter(
-		# 		filename = "recs/"+str(datetime.now()).replace(":", ";")+".mp4",
-		# 		fourcc = cv2.VideoWriter_fourcc(*'IYUV'),# IYUV / DIVX
-		# 		fps = 30,
-		# 		frameSize = self.size)
+	def start(self, rcdCam = True):
+		self.rcdCam = rcdCam
 
 		self.listener = keyboard.Listener( on_press=self.on_press, on_release=self.on_release)
 		self.listener.start()
