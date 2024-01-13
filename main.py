@@ -4,9 +4,9 @@ from threading import Thread
 
 print("Iniciando Gravação")
 microphone = Microphone()
-# microphone.start()
-recThread = Thread(target=microphone.start, args=[])
-recThread.start()
 
 webcam = Webcam()
+
+# microphone.start()
+Thread(target=microphone.start, args=[]).start()
 webcam.start()

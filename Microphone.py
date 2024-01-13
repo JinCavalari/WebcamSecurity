@@ -12,7 +12,7 @@ class Microphone:
         self.filename = None
 
         self.audio = pyaudio.PyAudio()
-        self.stream = self.audio.open(format=pyaudio.paInt16, channels=1, rate=self.freq, input=True, frames_per_buffer=1024)
+        self.stream = self.audio.open(format=pyaudio.paInt16, channels=1, rate=self.freq, input=True, frames_per_buffer=1024, input_device_index=2)
         self.frames = [[], []]
 
         self.init_time_rec = None
@@ -41,7 +41,7 @@ class Microphone:
 
     def timer(self):
         while not self.end:
-            sleep(0.5)
+            sleep(0.1)
             if int((datetime.now() - self.init_time_rec).total_seconds()) >= self.time_rec:
                 self.init_time_rec = datetime.now()
                 self.saveAudio()
